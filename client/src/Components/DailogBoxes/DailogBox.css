@@ -1,0 +1,120 @@
+/* Colors and styling */
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.dailogbox {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.dailogbox .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+.dailogbox video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.dailogbox .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+}
+.dailogbox .cardDiv {
+  width: 30%;
+  margin: auto;
+  position: relative;
+  padding: 4rem 4rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+  outline: 2px solid green;
+  border-radius: 1rem;
+  outline-offset: -10px;
+}
+.dailogbox .cardDiv .dailogbox_header {
+  color: var(--textColor);
+}
+.dailogbox .cardDiv .gifDiv {
+  position: relative;
+  top: -3rem;
+  height: 150px;
+}
+.dailogbox .cardDiv .gifDiv img {
+  scale: 1;
+}
+.dailogbox .cardDiv .cardTitle {
+  color: var(--textColor);
+  margin: 1rem;
+}
+.dailogbox .cardDiv .searchOptions1 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: 1rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1.2rem;
+  border-radius: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.dailogbox .cardDiv .searchOptions1:hover {
+  background: var(--PrimaryColor);
+}
+.dailogbox .cardDiv .searchOptions1 .icon {
+  font-size: 18px;
+}
+.dailogbox .cardDiv .searchOptions1 span {
+  font-size: 13px;
+}
+.dailogbox .cardDivFail {
+  outline: 2px solid red;
+  border-radius: 1rem;
+  outline-offset: -10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dailogbox .homeContent .cardDiv {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=DailogBox.css.map */

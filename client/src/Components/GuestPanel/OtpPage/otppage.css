@@ -1,0 +1,184 @@
+/* Colors and styling */
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.otppage {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.otppage .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+.otppage video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.otppage .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+}
+.otppage .cardDiv {
+  width: 30%;
+  margin: auto;
+  position: relative;
+  padding: 2.5rem 2.5rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.otppage .cardDiv .otppage_header {
+  color: var(--textColor);
+}
+.otppage .cardDiv label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.otppage .cardDiv .label_total {
+  justify-content: space-between;
+  align-items: center;
+}
+.otppage .cardDiv .label_total .total {
+  color: var(--textColor);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.otppage .cardDiv .cardTitle {
+  color: var(--textColor);
+}
+.otppage .cardDiv .input {
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+}
+.otppage .cardDiv .input input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.otppage .cardDiv .input input::-moz-placeholder {
+  font-size: 13px;
+}
+.otppage .cardDiv .input input::placeholder {
+  font-size: 13px;
+}
+.otppage .cardDiv .input .icon {
+  font-size: 18px;
+  color: var(--PrimaryColor) !important;
+  margin-left: 10px;
+}
+.otppage .cardDiv .input .input[type=range] {
+  background: blue;
+}
+.otppage .cardDiv .searchOptions1 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: 0rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1.2rem;
+  border-radius: 0rem 2rem 0rem 0.7rem;
+  left: 11.1%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.otppage .cardDiv .searchOptions1:hover {
+  background: var(--PrimaryColor);
+}
+.otppage .cardDiv .searchOptions1 .icon {
+  font-size: 18px;
+}
+.otppage .cardDiv .searchOptions1 span {
+  font-size: 13px;
+}
+.otppage .cardDiv .searchOptions2 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: 0rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1.2em;
+  border-radius: 2rem 0rem 0.7rem 0rem;
+  left: 87.5%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.otppage .cardDiv .searchOptions2:hover {
+  background: var(--PrimaryColor);
+}
+.otppage .cardDiv .searchOptions2 .icon {
+  font-size: 18px;
+}
+.otppage .cardDiv .searchOptions2 span {
+  font-size: 13px;
+}
+.otppage .homeFooterIcons {
+  width: 100%;
+  justify-content: space-between;
+}
+.otppage .homeFooterIcons .icon {
+  font-size: 20px;
+  margin: 0 5px;
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.otppage .homeFooterIcons .icon:hover {
+  color: var(--PrimaryColor);
+}
+
+@media only screen and (max-width: 600px) {
+  .otppage .homeContent .cardDiv {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=otppage.css.map */

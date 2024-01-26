@@ -1,0 +1,320 @@
+/* Colors and styling */
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.addroom {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.addroom .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+.addroom video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.addroom .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+}
+.addroom .textDiv {
+  padding: 1rem 0;
+  display: grid;
+  place-items: center;
+}
+.addroom .textDiv .homeTitle {
+  position: relative;
+  font-size: 1.8rem;
+}
+.addroom .cardDiv {
+  position: relative;
+  padding: 1rem 2rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.addroom .cardDiv label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.addroom .cardDiv .label_total {
+  justify-content: space-between;
+  align-items: center;
+}
+.addroom .cardDiv .label_total .total {
+  color: var(--textColor);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.addroom .cardDiv .input {
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+}
+.addroom .cardDiv .input input, .addroom .cardDiv .input select {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.addroom .cardDiv .input input::-moz-placeholder, .addroom .cardDiv .input select::-moz-placeholder {
+  font-size: 13px;
+}
+.addroom .cardDiv .input input::placeholder, .addroom .cardDiv .input select::placeholder {
+  font-size: 13px;
+}
+.addroom .cardDiv .input .icon {
+  font-size: 18px;
+  color: var(--PrimaryColor) !important;
+  margin-left: 10px;
+}
+.addroom .cardDiv .input .input[type=range] {
+  background: blue;
+}
+.addroom .cardDiv .searchOptions1 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -1.2rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1rem;
+  border-radius: 3rem;
+  left: 40%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.addroom .cardDiv .searchOptions1:hover {
+  background: var(--PrimaryColor);
+}
+.addroom .cardDiv .searchOptions1 .icon {
+  font-size: 18px;
+}
+.addroom .cardDiv .searchOptions1 span {
+  font-size: 13px;
+}
+.addroom .cardDiv .searchOptions2 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -1.2rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1rem;
+  border-radius: 3rem;
+  left: 60%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.addroom .cardDiv .searchOptions2:hover {
+  background: var(--PrimaryColor);
+}
+.addroom .cardDiv .searchOptions2 .icon {
+  font-size: 18px;
+}
+.addroom .cardDiv .searchOptions2 span {
+  font-size: 13px;
+}
+.addroom .homeFooterIcons {
+  width: 100%;
+  justify-content: space-between;
+}
+.addroom .homeFooterIcons .icon {
+  font-size: 20px;
+  margin: 0 5px;
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.addroom .homeFooterIcons .icon:hover {
+  color: var(--PrimaryColor);
+}
+
+@media only screen and (max-width: 600px) {
+  .addroom .homeContent .cardDiv {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+  }
+  .addroom .homeContent .cardDiv .searchOptions1 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    bottom: -1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 20%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addroom .homeContent .cardDiv .searchOptions1:hover {
+    background: var(--PrimaryColor);
+  }
+  .addroom .homeContent .cardDiv .searchOptions1 .icon {
+    font-size: 18px;
+  }
+  .addroom .homeContent .cardDiv .searchOptions1 span {
+    font-size: 13px;
+  }
+  .addroom .homeContent .cardDiv .searchOptions2 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    bottom: -1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 78%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addroom .homeContent .cardDiv .searchOptions2:hover {
+    background: var(--PrimaryColor);
+  }
+  .addroom .homeContent .cardDiv .searchOptions2 .icon {
+    font-size: 18px;
+  }
+  .addroom .homeContent .cardDiv .searchOptions2 span {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .addroom .homeContent .textDiv .smallText {
+    font-size: 16px;
+  }
+  .addroom .homeContent .textDiv .homeTitle {
+    position: relative;
+    font-size: 2.3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .addroom .homeContent .textDiv .homeTitle::after {
+    position: absolute;
+    content: "";
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 145px;
+    right: 0px;
+    bottom: 5px;
+    z-index: -1;
+  }
+  .addroom .homeContent .cardDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 660px) {
+  .addroom .homeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 940px) {
+  .addroom {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .addroom {
+    height: 100vh;
+  }
+  .addroom .searchOptions3 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    top: 1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 20%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addroom .searchOptions3:hover {
+    background: var(--PrimaryColor);
+  }
+  .addroom .searchOptions3 .icon {
+    font-size: 18px;
+  }
+  .addroom .searchOptions3 span {
+    font-size: 13px;
+  }
+  .addroom .homeContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .addroom .homeContent .cardDiv {
+    margin-right: 15rem;
+    margin-left: 15rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .addroom .homeContent .cardDiv .input {
+    margin-bottom: 1rem;
+  }
+  .addroom .homeContent .cardDiv .des {
+    width: 200%;
+  }
+  .addroom .homeContent .cardDiv .searchOptions {
+    bottom: -1rem;
+    padding: 8px 1rem;
+  }
+  .addroom .homeContent .cardDiv .searchOptions span {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=addRoom.css.map */

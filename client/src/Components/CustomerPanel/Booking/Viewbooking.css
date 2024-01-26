@@ -1,0 +1,276 @@
+/* Colors and styling */
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.viewbooking {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.viewbooking .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.viewbooking video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.viewbooking .secContent {
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  height: 100%;
+}
+.viewbooking .secContent .tableStyle h1, .viewbooking .secContent .tableStyle h2, .viewbooking .secContent .tableStyle h3, .viewbooking .secContent .tableStyle h4, .viewbooking .secContent .tableStyle h5, .viewbooking .secContent .tableStyle h6 {
+  margin: 0;
+}
+.viewbooking .secContent .tableStyle p {
+  margin: 0;
+}
+.viewbooking .secContent .tableStyle ul, .viewbooking .secContent .tableStyle li {
+  margin: 0;
+  list-style-type: none;
+}
+.viewbooking .secContent .tableStyle input {
+  display: block;
+  outline: none;
+  border: none !important;
+}
+.viewbooking .secContent .tableStyle textarea {
+  display: block;
+  outline: none;
+}
+.viewbooking .secContent .tableStyle textarea:focus, .viewbooking .secContent .tableStyle input:focus {
+  border-color: transparent !important;
+}
+.viewbooking .secContent .tableStyle button {
+  outline: none !important;
+  border: none;
+  background: 0 0;
+}
+.viewbooking .secContent .tableStyle button:hover {
+  cursor: pointer;
+}
+.viewbooking .secContent .tableStyle iframe {
+  border: none !important;
+}
+.viewbooking .secContent .tableStyle .limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+.viewbooking .secContent .tableStyle .container-table100 {
+  width: 100%;
+  min-height: 100vh;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 320px;
+}
+.viewbooking .secContent .tableStyle .wrap-table100 {
+  width: 1500px;
+}
+.viewbooking .secContent .tableStyle table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 3rem auto;
+  position: relative;
+}
+.viewbooking .secContent .tableStyle table * {
+  position: relative;
+}
+.viewbooking .secContent .tableStyle table td, .viewbooking .secContent .tableStyle table th {
+  padding-left: 8px;
+}
+.viewbooking .secContent .tableStyle table thead tr {
+  height: 60px;
+  background: var(--PrimaryColor);
+}
+.viewbooking .secContent .tableStyle table tbody tr {
+  height: 50px;
+}
+.viewbooking .secContent .tableStyle table tbody tr:last-child {
+  border: 0;
+}
+.viewbooking .secContent .tableStyle table td, .viewbooking .secContent .tableStyle table th {
+  text-align: left;
+}
+.viewbooking .secContent .tableStyle table td.l, .viewbooking .secContent .tableStyle table th.l {
+  text-align: right;
+}
+.viewbooking .secContent .tableStyle table td.c, .viewbooking .secContent .tableStyle table th.c {
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle table td.r, .viewbooking .secContent .tableStyle table th.r {
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .table100-head th {
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: unset;
+}
+.viewbooking .secContent .tableStyle tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+.viewbooking .secContent .tableStyle tbody tr {
+  font-family: OpenSans-Regular;
+  font-size: 11px;
+  color: gray;
+  line-height: 1.2;
+  font-weight: unset;
+}
+.viewbooking .secContent .tableStyle tbody tr:hover {
+  color: #555;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.viewbooking .secContent .tableStyle .column1 {
+  width: 30px;
+}
+.viewbooking .secContent .tableStyle .column2 {
+  width: 80px;
+}
+.viewbooking .secContent .tableStyle .column3 {
+  width: 100px;
+}
+.viewbooking .secContent .tableStyle .column4 {
+  width: 100px;
+  text-align: left;
+}
+.viewbooking .secContent .tableStyle .column5 {
+  width: 100px;
+  text-align: left;
+}
+.viewbooking .secContent .tableStyle .column6 {
+  width: 100px;
+  text-align: left;
+}
+.viewbooking .secContent .tableStyle .column7 {
+  width: 100px;
+  text-align: left;
+}
+.viewbooking .secContent .tableStyle .column8 {
+  width: 100px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column9 {
+  width: 100px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column10 {
+  width: 100px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column11 {
+  width: 100px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column12 {
+  width: 100px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column13 {
+  width: 200px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle .column14 {
+  width: 200px;
+  text-align: center;
+}
+.viewbooking .secContent .tableStyle i {
+  font-size: 1.2em;
+}
+.viewbooking .secContent .tableStyle i:hover {
+  color: blue;
+}
+
+@media screen and (min-width: 500px) {
+  .bvrhome .bvrhomeContent .textDiv .smallText {
+    font-size: 16px;
+  }
+  .bvrhome .bvrhomeContent .textDiv .bvrhomeTitle {
+    position: relative;
+    font-size: 2.3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .bvrhome .bvrhomeContent .textDiv .bvrhomeTitle::after {
+    position: absolute;
+    content: "";
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 145px;
+    right: 0px;
+    bottom: 5px;
+    z-index: -1;
+  }
+  .bvrhome .bvrhomeContent .cardDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 660px) {
+  .bvrhome .bvrhomeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 940px) {
+  .bvrhome {
+    height: 80vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .bvrhome {
+    height: 100vh;
+  }
+  .bvrhome .bvrhomeContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .bvrhome .bvrhomeContent .cardDiv {
+    margin-right: 1rem;
+    margin-left: 0rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bvrhome .bvrhomeContent .cardDiv .input {
+    margin-bottom: 1rem;
+  }
+  .bvrhome .bvrhomeContent .cardDiv .searchOptions {
+    bottom: -1rem;
+    padding: 8px 1rem;
+  }
+  .bvrhome .bvrhomeContent .cardDiv .searchOptions span {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=Viewbooking.css.map */

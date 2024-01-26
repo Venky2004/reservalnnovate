@@ -1,0 +1,320 @@
+/* Colors and styling */
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.addcategory {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.addcategory .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(47, 106, 127);
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+.addcategory video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.addcategory .homeContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
+}
+.addcategory .textDiv {
+  padding: 1rem 0;
+  display: grid;
+  place-items: center;
+}
+.addcategory .textDiv .homeTitle {
+  position: relative;
+  font-size: 1.8rem;
+}
+.addcategory .cardDiv {
+  position: relative;
+  padding: 1rem 2rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.addcategory .cardDiv label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.addcategory .cardDiv .label_total {
+  justify-content: space-between;
+  align-items: center;
+}
+.addcategory .cardDiv .label_total .total {
+  color: var(--textColor);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.addcategory .cardDiv .input {
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+}
+.addcategory .cardDiv .input input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+}
+.addcategory .cardDiv .input input::-moz-placeholder {
+  font-size: 13px;
+}
+.addcategory .cardDiv .input input::placeholder {
+  font-size: 13px;
+}
+.addcategory .cardDiv .input .icon {
+  font-size: 18px;
+  color: var(--PrimaryColor) !important;
+  margin-left: 10px;
+}
+.addcategory .cardDiv .input .input[type=range] {
+  background: blue;
+}
+.addcategory .cardDiv .searchOptions1 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -1.2rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1rem;
+  border-radius: 3rem;
+  left: 40%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.addcategory .cardDiv .searchOptions1:hover {
+  background: var(--PrimaryColor);
+}
+.addcategory .cardDiv .searchOptions1 .icon {
+  font-size: 18px;
+}
+.addcategory .cardDiv .searchOptions1 span {
+  font-size: 13px;
+}
+.addcategory .cardDiv .searchOptions2 {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -1.2rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 10px 1rem;
+  border-radius: 3rem;
+  left: 60%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.addcategory .cardDiv .searchOptions2:hover {
+  background: var(--PrimaryColor);
+}
+.addcategory .cardDiv .searchOptions2 .icon {
+  font-size: 18px;
+}
+.addcategory .cardDiv .searchOptions2 span {
+  font-size: 13px;
+}
+.addcategory .homeFooterIcons {
+  width: 100%;
+  justify-content: space-between;
+}
+.addcategory .homeFooterIcons .icon {
+  font-size: 20px;
+  margin: 0 5px;
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.addcategory .homeFooterIcons .icon:hover {
+  color: var(--PrimaryColor);
+}
+
+@media only screen and (max-width: 600px) {
+  .addcategory .homeContent .cardDiv {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions1 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    bottom: -1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 20%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions1:hover {
+    background: var(--PrimaryColor);
+  }
+  .addcategory .homeContent .cardDiv .searchOptions1 .icon {
+    font-size: 18px;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions1 span {
+    font-size: 13px;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions2 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    bottom: -1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 78%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions2:hover {
+    background: var(--PrimaryColor);
+  }
+  .addcategory .homeContent .cardDiv .searchOptions2 .icon {
+    font-size: 18px;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions2 span {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .addcategory .homeContent .textDiv .smallText {
+    font-size: 16px;
+  }
+  .addcategory .homeContent .textDiv .homeTitle {
+    position: relative;
+    font-size: 2.3rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .addcategory .homeContent .textDiv .homeTitle::after {
+    position: absolute;
+    content: "";
+    background: var(--SecondaryColor);
+    height: 5px;
+    width: 145px;
+    right: 0px;
+    bottom: 5px;
+    z-index: -1;
+  }
+  .addcategory .homeContent .cardDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 660px) {
+  .addcategory .homeContent .cardDiv {
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 940px) {
+  .addcategory {
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .addcategory {
+    height: 100vh;
+  }
+  .addcategory .searchOptions3 {
+    position: absolute;
+    background: var(--gradientColor);
+    width: -moz-max-content;
+    width: max-content;
+    top: 1.2rem;
+    -moz-column-gap: 0.8rem;
+         column-gap: 0.8rem;
+    padding: 10px 1rem;
+    border-radius: 3rem;
+    left: 20%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+  }
+  .addcategory .searchOptions3:hover {
+    background: var(--PrimaryColor);
+  }
+  .addcategory .searchOptions3 .icon {
+    font-size: 18px;
+  }
+  .addcategory .searchOptions3 span {
+    font-size: 13px;
+  }
+  .addcategory .homeContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .addcategory .homeContent .cardDiv {
+    margin-right: 15rem;
+    margin-left: 15rem;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .addcategory .homeContent .cardDiv .input {
+    margin-bottom: 1rem;
+  }
+  .addcategory .homeContent .cardDiv .des {
+    width: 200%;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions {
+    bottom: -1rem;
+    padding: 8px 1rem;
+  }
+  .addcategory .homeContent .cardDiv .searchOptions span {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=Addcategory.css.map */
