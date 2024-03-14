@@ -15,13 +15,13 @@ ReservaInnovate is a hotel management web application developed as a skill devel
 1. Clone the frontend repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/reserva-innovate-frontend.git
+    git clone https://github.com/Venky2004/reservalnnovate.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd reserva-innovate-frontend
+    cd reservaInnovate
     ```
 
 3. Install dependencies:
