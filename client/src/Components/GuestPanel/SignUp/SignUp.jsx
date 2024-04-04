@@ -29,6 +29,7 @@ const SignUp = () => {
   },[]);
 
   //const notify = () => toast("Registered Successful");
+  const serverurl = localStorage.getItem('backendUrl');
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -47,8 +48,7 @@ const SignUp = () => {
 
     if(validatevalues()){
       try {
-        console.log(name,email,phoneno,dateOfBirth,adress,aadharNo,password,confirmpassword)
-        const response = await axios.post('http://localhost:8080/user/register', {
+        const response = await axios.post(`${serverurl}/user/register`, {
           name,
           email,
           phoneno,

@@ -16,6 +16,7 @@ import Success from './Components/DailogBoxes/Success';
 import Failed from './Components/DailogBoxes/Failed';
 import LoginFailed from './Components/DailogBoxes/LoginFailed';
 import CityNotFound from './Components/DailogBoxes/CityNotFound';
+import BackendSettingsPage from './Components/Backend/BackendSettingsPage';
 
 import BVR from './Components/CustomerPanel/BVR/BVR';
 import BookStay from './Components/CustomerPanel/Book-A-Stay/BookStay';
@@ -52,6 +53,7 @@ function App() {
       <Route path='/addroom' element={<AddRoom/>}/>
       <Route path="/pay" element={<Paymentpage/>}/>
       <Route path="/viewbookings" element={<ViewBooking/>}/>
+      <Route path="/backendsetup" element={<BackendSettingsPage/>}/>
       {/* <Route path="/searchhotels" element={<SearchHotels/>}/> */}
       <Route path="/home" element={<BVR/>}/>
       </Routes>

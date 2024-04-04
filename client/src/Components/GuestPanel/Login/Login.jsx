@@ -29,6 +29,8 @@ const Login = () => {
 
   const navigate=useNavigate(false);
 
+  const serverurl = localStorage.getItem('backendUrl');
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -36,7 +38,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://fq1g7hgb-8080.inc1.devtunnels.ms/user/login', {
+      const response = await axios.post(`${serverurl}/user/login`, {
         email,
         password,
       });
@@ -64,7 +66,6 @@ const Login = () => {
             console.log('hello');
             navigate('/adminhome');
           } else if (userRole  == "customer") {
-            console.log('bye');
             navigate('/home');
           } else {
             console.log('Unknown role');
