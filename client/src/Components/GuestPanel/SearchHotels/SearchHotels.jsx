@@ -70,6 +70,7 @@ function generateRandomImage() {
 
 const SearchHotels = (props) => {
 
+  const serverurl = localStorage.getItem("backendUrl");
   const [infodata,setInfodata] = useState([]);
   const navigate=useNavigate(false);
   const { destination } = useParams();
@@ -82,10 +83,9 @@ const SearchHotels = (props) => {
   const handleLocation = async (e) => {
     try {
       console.log(location);
-      const response = await axios.post('http://localhost:8080/user/location', {
+      const response = await axios.post(`${serverurl}/user/location`, {
         location,
       });
-      // infodata=Array.from(response.data);
       setInfodata(response.data);
       console.log(infodata);
       if(infodata===null)navigate("/city404");
@@ -107,51 +107,42 @@ const SearchHotels = (props) => {
       
       <div className="secContent grid">
       {
-        
-        infodata.map(({latitude,hotelName,location,description}) =>{
-            return(
-              <div key={latitude}
-              data-aos="fade-up"
-               className="singleDestination">
-                 <div className="imageDiv">
-                  <img src={generateRandomImage()}  alt={hotelName}/>
-                 </div>
-                 
-                 <div className="cardInfo">
-                  <h4 className="destTitle">
-                    {hotelName}
-                  </h4>
-                  <span className="continent flex">
-                    <HiOutlineLocationMarker className='icon'/>
-                    <span className="name">
-                      {location}
-                    </span>
-                  </span>
+  infodata.length === 0 ? (
+    <div>No hotels found</div>
+  ) : (
+    infodata.map(({ latitude, hotelName, location, description }) => {
+      return (
+        <div key={latitude} data-aos="fade-up" className="singleDestination">
+          <div className="imageDiv">
+            <img src={generateRandomImage()} alt={hotelName} />
+          </div>
 
-                  <div className="fees flex">
-                    <div className="grade">
-                      <span>
-                     
-                        <small>
-                          +1
-                        </small>
-                      </span>
-                    </div>
-                    
-                  </div>
-                  <div className="desc">
-                    {description}
-                  </div>
+          <div className="cardInfo">
+            <h4 className="destTitle">{hotelName}</h4>
+            <span className="continent flex">
+              <HiOutlineLocationMarker className="icon" />
+              <span className="name">{location}</span>
+            </span>
 
-                  <button className='btn flex'>
-                    Details <HiOutlineClipboard className="icon"/>
-                  </button>
-
-                 </div>
+            <div className="fees flex">
+              <div className="grade">
+                <span>
+                  <small>+1</small>
+                </span>
               </div>
-            )
-        })
-      }
+            </div>
+            <div className="desc">{description}</div>
+
+            <button className="btn flex">
+              Details <HiOutlineClipboard className="icon" />
+            </button>
+          </div>
+        </div>
+      );
+    })
+  )
+}
+
 
       </div>
     </section>

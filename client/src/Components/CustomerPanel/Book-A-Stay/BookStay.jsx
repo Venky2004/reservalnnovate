@@ -62,11 +62,12 @@ const BookStay = (props) => {
 
   const navigate = useNavigate();
   const { destination } = useParams();
+  const serverurl = localStorage.getItem("backendUrl")
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:8080/user/getRoomType');
+        const response = await axios.get(`${serverurl}/user/getRoomType`);
         setData(response.data);
         console.log(Data);
       } catch (error) {

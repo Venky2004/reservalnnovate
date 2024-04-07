@@ -26,6 +26,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const AddCategory = () => {
 
   const location = useLocation();
+  const serverurl = localStorage.getItem("backendUrl");
 
   useEffect(()=>{
     Aos.init({duration:2000})
@@ -45,7 +46,7 @@ const AddCategory = () => {
 
     if(validatevalues()){
       try {
-        const response = await axios.post('http://localhost:8080/user/addRoomType', {
+        const response = await axios.post(`${serverurl}/user/addRoomType`, {
           roomType,
           price,
           roomCapacity,

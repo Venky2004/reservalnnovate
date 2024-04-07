@@ -21,6 +21,7 @@ const ViewBooking = () => {
 
   const navigate = useNavigate();
   const [Data,setData]=useState([]);
+  const serverurl =localStorage.getItem("backendUrl");
 
   const [refrenceID, setRefrenceid] = useState('');
   const [price, setPrice] = useState('');
@@ -28,7 +29,7 @@ const ViewBooking = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:8080/user/bookingHistory');
+        const response = await axios.get(`${serverurl}/user/bookingHistory`);
         setData(response.data);
         console.log(Data);
       } catch (error) {

@@ -15,7 +15,6 @@
 
 .payment {
   width: 100%;
-  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -26,9 +25,11 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  background: rgb(47, 106, 127);
   top: 0;
   bottom: 0;
   z-index: 1;
+  mix-blend-mode: hard-light;
 }
 .payment video {
   position: absolute;
@@ -40,12 +41,20 @@
      object-fit: cover;
 }
 .payment .secContent {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 8rem 1.5rem 3rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 4rem;
-  height: 100%;
+  margin: auto;
+  color: var(--whiteColor);
+  z-index: 100;
 }
-.payment .secContent .singleDestination {
+.payment .singleDestination {
   height: 100%;
   display: grid;
   row-gap: 10px;
@@ -55,73 +64,71 @@
   box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
   overflow: hidden;
 }
-.payment .secContent .singleDestination:hover {
+.payment .singleDestination:hover {
   background: var(--cardHover);
   box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
   transition: 0.3s ease-in-out;
 }
-.payment .secContent .singleDestination .destTitle {
+.payment .singleDestination .destTitle {
   padding-top: 0px;
   color: var(--blackColor);
   font-size: 1.25rem;
   justify-self: center;
 }
-.payment .secContent .singleDestination .destTitle .icon {
+.payment .singleDestination .destTitle .icon {
   color: var(--PrimaryColor);
   font-size: 18px;
   margin-top: 50px;
 }
-.payment .secContent .singleDestination .imageDiv {
+.payment .singleDestination .imageDiv {
   height: 360px;
   width: 100%;
   padding: 20px;
 }
-.payment .secContent .singleDestination .imageDiv img {
+.payment .singleDestination .imageDiv img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   transition: 2s ease;
 }
-.payment .secContent .singleDestination .imageDiv:hover img {
+.payment .singleDestination .imageDiv:hover img {
   transform: scale(1.1);
 }
-.payment .secContent .singleDestination .cardInfo {
+.payment .singleDestination .cardInfo {
   padding: 0rem 2rem 1rem 2rem;
 }
-.payment .secContent .singleDestination .cardInfo .destTitle {
+.payment .singleDestination .cardInfo .destTitle {
   color: var(--blackColor);
   font-size: 1.25rem;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input {
+.payment .singleDestination .cardInfo .payDetail .input {
   height: 40px;
   padding: 0 1rem;
   background: var(--inputColor);
   border-radius: 3rem;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input input {
+.payment .singleDestination .cardInfo .payDetail .input input {
   background: none;
   border: none;
   outline: none;
+  z-index: 3;
   width: 100%;
   font-size: 13px;
   font-weight: 500;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input input::-moz-placeholder {
+.payment .singleDestination .cardInfo .payDetail .input input::-moz-placeholder {
   font-size: 13px;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input input::placeholder {
+.payment .singleDestination .cardInfo .payDetail .input input::placeholder {
   font-size: 13px;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input .icon {
+.payment .singleDestination .cardInfo .payDetail .input .icon {
   font-size: 18px;
   color: var(--PrimaryColor) !important;
   margin-left: 10px;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .input .input[type=range] {
-  background: blue;
-}
-.payment .secContent .singleDestination .cardInfo .payDetail .searchOptions {
+.payment .singleDestination .cardInfo .payDetail .searchOptions {
   background: var(--gradientColor);
   width: -moz-max-content;
   width: max-content;
@@ -131,72 +138,45 @@
        column-gap: 0.8rem;
   padding: 10px 1rem;
   border-radius: 3rem;
+  z-index: 5;
   justify-content: center;
   cursor: pointer;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .searchOptions:hover {
+.payment .singleDestination .cardInfo .payDetail .searchOptions:hover {
   background: var(--PrimaryColor);
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .searchOptions .icon {
+.payment .singleDestination .cardInfo .payDetail .searchOptions .icon {
   font-size: 18px;
 }
-.payment .secContent .singleDestination .cardInfo .payDetail .searchOptions span {
+.payment .singleDestination .cardInfo .payDetail .searchOptions span {
   font-size: 13px;
 }
-.payment .secContent .singleDestination .cardInfo .continent {
+.payment .singleDestination .cardInfo .continent {
   gap: 0.5rem;
 }
-.payment .secContent .singleDestination .cardInfo .continent .icon {
+.payment .singleDestination .cardInfo .continent .icon {
   color: var(--textColor);
   font-size: 18px;
   padding-top: 1rem;
 }
-.payment .secContent .singleDestination .cardInfo .continent .name {
+.payment .singleDestination .cardInfo .continent .name {
   color: var(--textColor);
   font-weight: 400;
   font-size: 14px;
 }
-.payment .secContent .singleDestination .cardInfo .fees {
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-top: 1.5px solid var(--greyText);
-  border-bottom: 1.5px solid var(--greyText);
-}
-.payment .secContent .singleDestination .cardInfo .fees .grade {
-  color: var(--textColor);
-  max-width: 100px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.payment .secContent .singleDestination .cardInfo .fees .grade small {
-  text-align: center;
-  background: var(--gradientColor);
-  border-radius: 1rem;
-  color: var(--whiteColor);
-  padding: 1px 10px;
-  font-size: 10px;
-}
-.payment .secContent .singleDestination .cardInfo .fees .price {
-  font-size: 2rem;
-  color: var(--blackColor);
-}
-.payment .secContent .singleDestination .cardInfo .desc {
+.payment .singleDestination .cardInfo .desc {
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
 }
-.payment .secContent .singleDestination .cardInfo .btn {
+.payment .singleDestination .cardInfo .btn {
   margin-top: 1rem;
   color: var(--whiteColor);
   font-weight: 600;
   justify-content: space-between;
   gap: 0.5rem;
 }
-.payment .secContent .singleDestination .cardInfo .btn .icon {
+.payment .singleDestination .cardInfo .btn .icon {
   align-self: center;
   font-size: 18px;
 }

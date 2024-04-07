@@ -22,6 +22,7 @@ const Payment = () => {
   },[])
 
   const navigate = useNavigate();
+  const serverurl = localStorage.getItem("backendUrl")
 
   const [status,setStatus] = useState("Yes")
   const [referenceId, setRefid] = useState('');
@@ -32,7 +33,7 @@ const Payment = () => {
     if(validatevalues()){
       try {
         console.log(status,referenceId,price);
-        const response = await axios.post('http://localhost:8080/user/payments', {
+        const response = await axios.post(`${serverurl}/user/payments`, {
         status,referenceId,price
         });
   

@@ -68,7 +68,7 @@ const SignUp = () => {
           navigate("/success");
         }
         else{
-          toast("Registered Successful")
+          toast("Registered UnSuccessful")
           navigate("/failure")
         }
 

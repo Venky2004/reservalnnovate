@@ -91,7 +91,7 @@ const Bookastayform = () => {
 
 
 
-  
+  const serverurl = localStorage.getItem("backendUrl")
   const navigate = useNavigate(false);
 
   const handleRegister = async (e) => {
@@ -101,7 +101,7 @@ const Bookastayform = () => {
     if(validatevalues()){
       try {
        
-        const response = await axios.post('http://localhost:8080/user/bookingDetails', {
+        const response = await axios.post(`${serverurl}/user/bookingDetails`, {
         roomType,
         price,
         personCount,

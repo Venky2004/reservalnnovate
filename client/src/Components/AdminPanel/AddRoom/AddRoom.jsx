@@ -24,6 +24,7 @@ import UnAuthorisedAccess from '../../DailogBoxes/UnAuthorisedAccess'
 const AddRoom = () => {
 
   const location = useLocation();
+  const serverurl = localStorage.getItem("backendUrl");
   const [Data,setData] = useState([]);
 
 
@@ -42,7 +43,7 @@ const AddRoom = () => {
     if(validatevalues()){
       console.log(roomType);
     try {
-        const response = await axios.post('http://localhost:8080/user/addRooms', {
+        const response = await axios.post(`${serverurl}/user/addRooms`, {
           roomType,
           roomNo,
         });
@@ -94,7 +95,7 @@ const AddRoom = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:8080/user/getRoomType');
+        const response = await axios.get(`${serverurl}/user/getRoomType`);
         setData(response.data);
         console.log(Data);
       } catch (error) {
